@@ -22,10 +22,16 @@ function part1() {
         y = y + 1;
         x = (x + 3) % width;
     }
-    console.log("PART-1:", "Trees:", trees);
+    return trees;
 }
 
-part1();
+(() => {
+    const begin = new Date();
+    const output = part1();
+    console.log("PART-1:", "How many trees will be encountered on 3-1 slope:", output);
+    const end = new Date() - begin;
+    console.info('Execution time: %dms', end);
+})();
 
 function part2() {
     let width = array[0].length;
@@ -51,41 +57,14 @@ function part2() {
             x = (x + dx) % width;
         }
         all = all * trees;
-        console.log("Trees:", trees);
     })
-    console.log("PART-2:", "Trees on all slopes:", all);
+    return all;
 }
 
-part2();
-
-
-
-
-// function part1() {
-//     let width = array[0].length
-//     let x = "#";
-//     let pos = -3;
-//     let item = "";
-//     let tree = 0;
-//     let open = 0;
-//     let all = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         pos += 3;
-//         if (pos > width) {
-//             let rest = width + 1;
-//             pos -= rest;
-//         }
-//         console.log(array[i], pos);
-//         item = array[i].slice(pos, pos + 1);
-//         if (item.length == 0) {
-//             item = array[i].slice(pos - 1, pos)
-//         }
-//         if (item === x) {
-//             tree++;
-//         } else {
-//             open++;
-//         }
-//         all = open + tree;
-//         console.log(item, i, pos, tree, open, all);
-//     }
-// }
+(() => {
+    const begin = new Date();
+    const output = part2();
+    console.log("PART-2:", "Multiplication of 1-1, 3-1, 5-1, 7-1, 1-2 slopes:", output);
+    const end = new Date() - begin;
+    console.info('Execution time: %dms', end);
+})()
