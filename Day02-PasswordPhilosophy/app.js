@@ -20,10 +20,16 @@ function part1() {
             output++;
         }
     }
-    console.log("PART-1:", "Valid passwords:", output);
+    return [output];
 }
 
-part1();
+(() => {
+    const begin = new Date();
+    const output = part1();
+    console.log("PART-1:", "Ammount of valid passwords:", output);
+    const end = new Date() - begin;
+    console.info('Execution time: %dms', end);
+})();
 
 function part2() {
     let output = 0;
@@ -39,7 +45,13 @@ function part2() {
             output++;
         }
     }
-    console.log("PART-2:", "Valid passwords:", output);
+    return [output];
 }
 
-part2();
+(() => {
+    const begin = new Date();
+    const output = part2();
+    console.log("PART-2:", "Ammount of valid passwords:", output);
+    const end = new Date() - begin;
+    console.info('Execution time: %dms', end);
+})();
