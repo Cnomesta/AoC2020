@@ -20,7 +20,7 @@ function part1() {
             output++;
         }
     }
-    return [output];
+    return output;
 }
 
 (() => {
@@ -45,7 +45,7 @@ function part2() {
             output++;
         }
     }
-    return [output];
+    return output;
 }
 
 (() => {
