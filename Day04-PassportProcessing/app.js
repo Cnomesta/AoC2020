@@ -51,15 +51,7 @@ function part2() {
                 if (59 <= ch && ch <= 76) checkSum++;
             }
             if (checkSum === 7) {
-                console.log(i, "8",
-                    array[i][array[i].indexOf("byr") + 1],
-                    array[i][array[i].indexOf("iyr") + 1],
-                    array[i][array[i].indexOf("eyr") + 1],
-                    array[i][array[i].indexOf("ecl") + 1],
-                    array[i][array[i].indexOf("pid") + 1],
-                    array[i][array[i].indexOf("hcl") + 1],
-                    array[i][array[i].indexOf("hgt") + 1]
-                ); validPP++;
+                validPP++;
             }
             //console.log("8", i, validPP, checkSum);
             checkSum = 0;
@@ -79,15 +71,7 @@ function part2() {
                 if (59 <= ch && ch <= 76) checkSum++;
             }
             if (checkSum === 7) {
-                console.log(i, "7",
-                    array[i][array[i].indexOf("byr") + 1],
-                    array[i][array[i].indexOf("iyr") + 1],
-                    array[i][array[i].indexOf("eyr") + 1],
-                    array[i][array[i].indexOf("ecl") + 1],
-                    array[i][array[i].indexOf("pid") + 1],
-                    array[i][array[i].indexOf("hcl") + 1],
-                    array[i][array[i].indexOf("hgt") + 1]
-                ); validPP++;
+                validPP++;
             }
             //console.log("7", i, validPP, checkSum);
             checkSum = 0;
